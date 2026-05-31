@@ -1,0 +1,10 @@
+{
+  "name": "sai-patil-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Sai Patil",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000"
+  },
+  "dependencies": {}
+}
