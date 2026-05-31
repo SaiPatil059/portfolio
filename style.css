@@ -772,6 +772,14 @@ img { display: block; max-width: 100%; }
   margin-bottom: var(--space-3);
 }
 
+.project-status-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--duration) var(--ease);
+}
+.project-status-link:hover { color: var(--clr-text-body); }
+
+
 .project-title {
   font-size: clamp(24px, 2.5vw, 32px);
   font-weight: 400;
