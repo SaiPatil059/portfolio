@@ -909,6 +909,12 @@ img { display: block; max-width: 100%; }
 
 .project-card:hover { border-color: rgba(226, 226, 226, 0.5); }
 
+.project-card-featured-alt {
+  border-color: rgba(180, 160, 120, 0.4);
+  background: linear-gradient(135deg, rgba(180,150,90,0.05) 0%, var(--clr-surface-veil) 60%);
+}
+.project-card-featured-alt:hover { border-color: rgba(180, 160, 120, 0.7); }
+
 .project-card-header {
   display: flex;
   justify-content: space-between;
