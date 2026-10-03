@@ -84,10 +84,12 @@ img { display: block; max-width: 100%; }
    Motion Canvas
    ============================================ */
 #motion-canvas {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
   opacity: 0.5;
 }
 
@@ -95,11 +97,13 @@ img { display: block; max-width: 100%; }
    Background Decorative Elements
    ============================================ */
 .bg-decor {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
 }
 
 .bg-grid {
@@ -431,7 +435,7 @@ img { display: block; max-width: 100%; }
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding: 120px var(--space-5) var(--space-8);
+  padding: 96px var(--space-5) var(--space-6);
   overflow: hidden;
 }
 
@@ -539,7 +543,7 @@ img { display: block; max-width: 100%; }
   align-items: center;
   gap: var(--space-3);
   flex-wrap: wrap;
-  margin-bottom: var(--space-10);
+  margin-bottom: var(--space-6);
   animation: fadeInUp 0.8s var(--ease) 0.3s both;
 }
 

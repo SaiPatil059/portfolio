@@ -71,7 +71,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
 
 // ---- Scroll reveal ----
 const revealElements = document.querySelectorAll(
-  '.section-title, .about-text p, .project-featured, .project-card, .skill-card, .exp-card, .contact-card, .info-card, .hero-stats-row'
+  '.section-title, .about-text p, .project-featured, .project-card, .skill-card, .exp-card, .contact-card, .info-card'
 );
 
 revealElements.forEach(el => el.classList.add('reveal'));

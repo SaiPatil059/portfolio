@@ -89,6 +89,13 @@
 
   // ---- Initialize ----
   function init() {
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100vw';
+    canvas.style.height = '100vh';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '0';
     W = canvas.width = window.innerWidth;
     H = canvas.height = window.innerHeight;
     particles = Array.from({ length: CONFIG.particleCount }, () => new Particle());
