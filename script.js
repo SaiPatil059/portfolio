@@ -118,25 +118,10 @@ staggerReveal('.skills-bento', '.skill-card', 100);
 staggerReveal('.exp-grid', '.exp-card', 100);
 staggerReveal('.contact-cards', '.contact-card', 80);
 
-// ---- Skill bar animation ----
-const skillBars = document.querySelectorAll('.skill-fill');
-skillBars.forEach(bar => {
-  const finalWidth = bar.style.width;
-  bar.style.width = '0%';
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.style.width = finalWidth;
-        }, 400);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(bar);
-});
+// ---- Skill chip stagger animation ----
+staggerReveal('.skill-chip-grid', '.skill-chip', 60);
+staggerReveal('.skill-domain-grid', '.domain-card', 80);
+staggerReveal('.cert-grid', '.cert-item', 100);
 
 // ---- Smooth scroll for all anchor links ----
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

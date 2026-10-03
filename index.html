@@ -12,6 +12,24 @@
 </head>
 <body>
 
+  <!-- Motion Graphics Canvas -->
+  <canvas id="motion-canvas"></canvas>
+
+  <!-- Background Decorative Elements -->
+  <div class="bg-decor" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+    <div class="bg-shape bg-shape-ring" style="top:15%;right:8%"></div>
+    <div class="bg-shape bg-shape-cross" style="top:45%;left:5%"></div>
+    <div class="bg-shape bg-shape-ring" style="bottom:30%;right:15%"></div>
+    <div class="bg-shape bg-shape-dots" style="top:70%;left:12%"></div>
+    <div class="bg-shape bg-shape-cross" style="bottom:15%;right:6%"></div>
+    <div class="bg-shape bg-shape-triangle" style="top:25%;left:15%"></div>
+    <div class="bg-shape bg-shape-triangle" style="bottom:40%;right:22%"></div>
+  </div>
+
   <!-- Navigation -->
   <nav id="navbar" class="navbar">
     <div class="nav-container">
@@ -42,6 +60,19 @@
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-bg-accent"></div>
+    <div class="hero-mesh" aria-hidden="true">
+      <svg width="100%" height="100%" viewBox="0 0 800 600" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="mesh-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="rgba(37,99,235,0.04)"/>
+            <stop offset="100%" stop-color="rgba(139,92,246,0.03)"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,300 Q200,200 400,300 T800,280" fill="none" stroke="url(#mesh-grad)" stroke-width="1.5" class="mesh-line mesh-line-1"/>
+        <path d="M0,350 Q300,250 500,350 T800,330" fill="none" stroke="url(#mesh-grad)" stroke-width="1" class="mesh-line mesh-line-2"/>
+        <path d="M0,400 Q250,320 450,400 T800,380" fill="none" stroke="url(#mesh-grad)" stroke-width="0.8" class="mesh-line mesh-line-3"/>
+      </svg>
+    </div>
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-badge">
@@ -398,101 +429,98 @@
 
       <div class="skills-bento">
 
-        <div class="skill-card skill-card-wide">
-          <span class="skill-card-label">Programming & ML</span>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>Python (SciPy, NumPy, Pandas)</span>
-                <span class="skill-pct">85%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 85%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>PyTorch</span>
-                <span class="skill-pct">75%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 75%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>Scikit-Learn</span>
-                <span class="skill-pct">82%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 82%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>MATLAB</span>
-                <span class="skill-pct">75%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 75%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>Git / GitHub</span>
-                <span class="skill-pct">80%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 80%"></div></div>
-            </div>
-          </div>
-        </div>
-
+        <!-- Programming & ML -->
         <div class="skill-card">
-          <span class="skill-card-label">CAD & Simulation</span>
-          <div class="skill-bars">
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>Autodesk Fusion 360</span>
-                <span class="skill-pct">90%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 90%"></div></div>
+          <div class="skill-card-head">
+            <div class="skill-card-icon skill-icon-code">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
             </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>SolidWorks</span>
-                <span class="skill-pct">80%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 80%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>AutoCAD</span>
-                <span class="skill-pct">75%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 75%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-header">
-                <span>ANSYS FEA</span>
-                <span class="skill-pct">70%</span>
-              </div>
-              <div class="skill-track"><div class="skill-fill" style="width: 70%"></div></div>
-            </div>
+            <span class="skill-card-label">Programming & ML</span>
+          </div>
+          <div class="skill-chip-grid">
+            <div class="skill-chip"><span class="chip-icon">🐍</span> Python</div>
+            <div class="skill-chip"><span class="chip-icon">🔥</span> PyTorch</div>
+            <div class="skill-chip"><span class="chip-icon">🧠</span> Scikit-Learn</div>
+            <div class="skill-chip"><span class="chip-icon">📊</span> SciPy</div>
+            <div class="skill-chip"><span class="chip-icon">🔢</span> NumPy</div>
+            <div class="skill-chip"><span class="chip-icon">🐼</span> Pandas</div>
+            <div class="skill-chip"><span class="chip-icon">📐</span> MATLAB</div>
+            <div class="skill-chip"><span class="chip-icon">🌿</span> Git / GitHub</div>
           </div>
         </div>
 
+        <!-- CAD & Simulation -->
         <div class="skill-card">
-          <span class="skill-card-label">Research Areas</span>
-          <div class="skill-tag-grid">
-            <span class="skill-tag">Computational Mechanics</span>
-            <span class="skill-tag">Neural ODEs</span>
-            <span class="skill-tag">Physics-Informed NNs</span>
-            <span class="skill-tag">Scientific ML</span>
-            <span class="skill-tag">Gaussian Process Regression</span>
-            <span class="skill-tag">Structural Optimization</span>
-            <span class="skill-tag">Aerodynamics</span>
-            <span class="skill-tag">Predictive Maintenance</span>
+          <div class="skill-card-head">
+            <div class="skill-card-icon skill-icon-cad">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <span class="skill-card-label">CAD & Simulation</span>
+          </div>
+          <div class="skill-chip-grid">
+            <div class="skill-chip"><span class="chip-icon">⚙️</span> Fusion 360</div>
+            <div class="skill-chip"><span class="chip-icon">🔧</span> SolidWorks</div>
+            <div class="skill-chip"><span class="chip-icon">📏</span> AutoCAD</div>
+            <div class="skill-chip"><span class="chip-icon">🔬</span> ANSYS FEA</div>
           </div>
         </div>
 
+        <!-- Research Areas -->
         <div class="skill-card skill-card-wide">
-          <span class="skill-card-label">Certifications</span>
+          <div class="skill-card-head">
+            <div class="skill-card-icon skill-icon-research">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </div>
+            <span class="skill-card-label">Research Areas</span>
+          </div>
+          <div class="skill-domain-grid">
+            <div class="domain-card">
+              <span class="domain-icon">⚡</span>
+              <span class="domain-name">Computational Mechanics</span>
+            </div>
+            <div class="domain-card">
+              <span class="domain-icon">🧬</span>
+              <span class="domain-name">Neural ODEs</span>
+            </div>
+            <div class="domain-card">
+              <span class="domain-icon">🧪</span>
+              <span class="domain-name">Physics-Informed NNs</span>
+            </div>
+            <div class="domain-card">
+              <span class="domain-icon">🤖</span>
+              <span class="domain-name">Scientific ML</span>
+            </div>
+            <div class="domain-card">
+              <span class="domain-icon">📈</span>
+              <span class="domain-name">Gaussian Process Regression</span>
+            </div>
+            <div class="domain-card">
+              <span class="domain-icon">🏗️</span>
+              <span class="domain-name">Structural Optimization</span>
+            </div>
+            <div class="domain-card">
+              <span class="domain-icon">✈️</span>
+              <span class="domain-name">Aerodynamics</span>
+            </div>
+            <div class="domain-card">
+              <span class="domain-icon">🔮</span>
+              <span class="domain-name">Predictive Maintenance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="skill-card skill-card-wide">
+          <div class="skill-card-head">
+            <div class="skill-card-icon skill-icon-cert">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <span class="skill-card-label">Certifications</span>
+          </div>
           <div class="cert-grid">
             <div class="cert-item">
-              <div class="cert-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <div class="cert-check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
               <div>
                 <span class="cert-name">CAD Fundamentals — Autodesk Fusion</span>
@@ -500,8 +528,8 @@
               </div>
             </div>
             <div class="cert-item">
-              <div class="cert-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <div class="cert-check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
               <div>
                 <span class="cert-name">MATLAB Onramp — MathWorks</span>
@@ -583,5 +611,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="motion.js"></script>
 </body>
 </html>
